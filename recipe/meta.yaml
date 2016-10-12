@@ -12,17 +12,17 @@ source:
   md5: {{ md5 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
     - cmake
     - pkg-config  # [unix]
-    - qt 
+    - qt 4.8.*
   run:
-    - qt
- 
+    - qt 4.8.*
+
 test:
   commands:
     - test -f ${PREFIX}/lib/libqca.so  # [linux]
