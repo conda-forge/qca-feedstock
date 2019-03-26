@@ -10,9 +10,14 @@ source:
   fn: v{{ version }}.tar.gz
   url: https://github.com/KDE/qca/archive/v{{ version }}.tar.gz
   md5: {{ md5 }}
+  patches:
+    # Patch to make OpenSSL 1.1 work. Applies commits from the QCA repo not yet
+    # included a in a release. Source:
+    # https://raw.githubusercontent.com/flathub/org.qgis.qgis/master/qca-openssl-1.1.patch
+    - qca-openssl-1.1.patch
 
 build:
-  number: 1002
+  number: 1003
 
 requirements:
   build:
