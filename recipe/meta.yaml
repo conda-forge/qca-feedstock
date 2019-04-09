@@ -1,6 +1,6 @@
 {% set name = "qca" %}
-{% set version = "2.1.3" %}
-{% set md5 = "bd646d08fdc1d9be63331a836ecd528f" %}
+{% set version = "2.2.0" %}
+{% set md5 = "1f68cde3f1ece62ea2d7d8f25e9f5579" %}
 
 package:
   name: qca
@@ -12,7 +12,7 @@ source:
   md5: {{ md5 }}
 
 build:
-  number: 1002
+  number: 0
 
 requirements:
   build:
