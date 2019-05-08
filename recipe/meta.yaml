@@ -1,6 +1,6 @@
 {% set name = "qca" %}
-{% set version = "2.1.3" %}
-{% set md5 = "bd646d08fdc1d9be63331a836ecd528f" %}
+{% set version = "2.2.1" %}
+{% set md5 = "6116b6d0ad81d166edc26b14a1dbf39e" %}
 
 package:
   name: qca
@@ -12,7 +12,7 @@ source:
   md5: {{ md5 }}
 
 build:
-  number: 1002
+  number: 1000
 
 requirements:
   build:
@@ -22,8 +22,10 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - qt
+    - openssl
   run:
     - qt
+    - openssl
 
 test:
   commands:
