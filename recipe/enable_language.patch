@@ -2,10 +2,11 @@
 +++ qca-2.2.1/CMakeLists.txt	2019-05-12 18:32:09.169982929 -0300
 @@ -8,15 +8,13 @@
  
- project(qca)
+-project(qca)
++cmake_minimum_required(VERSION 3.10)
  
 -cmake_minimum_required(VERSION 3.4)
-+cmake_minimum_required(VERSION 3.10)
++project(qca)
  
  set(QCA_LIB_MAJOR_VERSION "2")
  set(QCA_LIB_MINOR_VERSION "2")
