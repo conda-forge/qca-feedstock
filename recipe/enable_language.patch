@@ -1,6 +1,6 @@
 --- qca-2.2.1.orig/CMakeLists.txt	2019-04-23 09:04:15.000000000 -0300
 +++ qca-2.2.1/CMakeLists.txt	2019-05-12 18:32:09.169982929 -0300
-@@ -8,15 +8,13 @@
+@@ -8,15 +8,18 @@
  
 -project(qca)
 +cmake_minimum_required(VERSION 3.4)
@@ -12,10 +12,12 @@
  set(QCA_LIB_MINOR_VERSION "2")
  set(QCA_LIB_PATCH_VERSION "1")
  
--if(POLICY CMP0042)
--  cmake_policy(SET CMP0042 OLD)
--endif()
-+cmake_policy(SET CMP0048 OLD)
+ if(POLICY CMP0042)
+   cmake_policy(SET CMP0042 OLD)
+ endif()
++if(POLICY CMP0026)
++  cmake_policy(SET CMP0026 OLD)
++endif()
  
  option(BUILD_TESTS "Create test" ON)
  option(BUILD_TOOLS "Compile mozcerts and qcatool" ON)
