@@ -10,6 +10,7 @@ cmake \
     -D USE_RELATIVE_PATHS=TRUE \
     -D QCA_PLUGINS_INSTALL_DIR=${PREFIX}/plugins \
     -D CMAKE_PREFIX_PATH=${PREFIX} \
+    -D CMAKE_BUILD_TYPE=Release \
     ${SRC_DIR}
 
 make -j${CPU_COUNT}
