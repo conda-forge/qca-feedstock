@@ -1,18 +1,18 @@
-{% set name = "qca" %}
-{% set version = "2.1.3" %}
-{% set md5 = "bd646d08fdc1d9be63331a836ecd528f" %}
+{% set version = "2.2.1" %}
 
 package:
   name: qca
   version: {{ version }}
 
 source:
-  fn: v{{ version }}.tar.gz
   url: https://github.com/KDE/qca/archive/v{{ version }}.tar.gz
-  md5: {{ md5 }}
+  sha256: c67fc0fa8ae6cb3d0ba0fbd8fca8ee8e4c5061b99f1fd685fd7d9800cef17f6b
+  patches:
+    - enable_language.patch
 
 build:
-  number: 1002
+  number: 0
+  skip: True  # [win and vc<14]
 
 requirements:
   build:
