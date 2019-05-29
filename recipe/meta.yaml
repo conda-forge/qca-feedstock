@@ -11,7 +11,7 @@ source:
     - enable_language.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
@@ -30,6 +30,7 @@ test:
     - test -f ${PREFIX}/lib/libqca-qt5.so  # [linux]
     - test -d ${PREFIX}/lib/qca-qt5.framework  # [osx]
     - if not exist %LIBRARY_BIN%\\qca-qt5.dll exit 1  # [win]
+    - qcatool-qt5 --noprompt --newpass= key make rsa 2048 test.key
 
 about:
   home: http://delta.affinix.com/qca/
