@@ -22,8 +22,10 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - qt
+    - openssl
   run:
     - qt
+    - openssl
 
 test:
   commands:
