@@ -5,7 +5,7 @@ cd build
 :: "default" channel "qt" creates "plugins" in root of environment
 :: Need to put "qca" plugin -- including qca-ossl -- in that folder
 cmake -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
-    -DUSE_RELATIVE_PATHS=TRUE ^
+    -DUSE_RELATIVE_PATHS=FALSE ^
     -DQCA_PLUGINS_INSTALL_DIR=%LIBRARY_PREFIX%/plugins ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -G "NMake Makefiles" ^
