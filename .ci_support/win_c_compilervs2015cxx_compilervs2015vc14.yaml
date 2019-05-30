@@ -6,11 +6,7 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2015
-openssl:
-- 1.1.1a
 pin_run_as_build:
-  openssl:
-    max_pin: x.x.x
   qt:
     max_pin: x.x
   vc:
