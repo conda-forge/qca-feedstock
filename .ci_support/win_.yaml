@@ -15,7 +15,3 @@ qt:
 - '5.12'
 vc:
 - '14'
-zip_keys:
-- - vc
-  - c_compiler
-  - cxx_compiler
