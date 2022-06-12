@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://userbase.kde.org/QCA
-  license: LGPL-2.1
+  license: LGPL-2.1L-only
   license_file: COPYING
   summary: Qt Cryptographic Architecture (QCA) provides a straightforward and cross-platform crypto API, using Qt datatypes and conventions.
   description: |
