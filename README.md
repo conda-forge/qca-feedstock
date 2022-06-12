@@ -1,7 +1,7 @@
 About qca
 =========
 
-Home: http://delta.affinix.com/qca/
+Home: https://userbase.kde.org/QCA
 
 Package license: LGPL-2.1
 
@@ -191,4 +191,5 @@ Feedstock Maintainers
 =====================
 
 * [@ceholden](https://github.com/ceholden/)
+* [@izahn](https://github.com/izahn/)
 
