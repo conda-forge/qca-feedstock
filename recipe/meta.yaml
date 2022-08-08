@@ -11,19 +11,20 @@ source:
     - enable_language.patch
 
 build:
-  number: 3
+  number: 4
   skip: True  # [win and vc<14]
 
 requirements:
   build:
     - cmake
+    - make  # [linux]
     - pkg-config  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - qt
+    - qt-main
   run:
-    - qt
+    - qt-main
     - openssl
 
 test:
@@ -35,8 +36,8 @@ test:
     - qcatool-qt5.exe  --noprompt --newpass= key make rsa 2048 test.key  # [win]
 
 about:
-  home: http://delta.affinix.com/qca/
-  license: LGPL-2.1
+  home: https://userbase.kde.org/QCA
+  license: LGPL-2.1L-only
   license_file: COPYING
   summary: Qt Cryptographic Architecture (QCA) provides a straightforward and cross-platform crypto API, using Qt datatypes and conventions.
   description: |
@@ -54,3 +55,4 @@ about:
 extra:
   recipe-maintainers:
     - ceholden
+    - izahn
