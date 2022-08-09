@@ -1,8 +1,6 @@
 --- qca-2.3.4.orig/CMakeLists.tx
 +++ qca-2.3.4/CMakeLists.txt
-@@ -8,15 +8,18 @@
- 
-@@ -18,6 +18,9 @@ set(QCA_LIB_PATCH_VERSION "4")
+@@ -18,6 +18,9 @@
  if(POLICY CMP0042)
    cmake_policy(SET CMP0042 OLD)
  endif()
