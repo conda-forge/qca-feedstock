@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/KDE/qca/archive/v{{ version }}.tar.gz
   sha256: 81902861e02c5764025ea305673a48571773c5787141a8510d7ddb32e0f33c41
+  patches:
+    - enable_language.patch
 
 build:
   number: 0
