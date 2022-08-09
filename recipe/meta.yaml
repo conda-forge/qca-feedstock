@@ -1,4 +1,4 @@
-{% set version = "2.2.1" %}
+{% set version = "2.3.4" %}
 
 package:
   name: qca
@@ -6,19 +6,19 @@ package:
 
 source:
   url: https://github.com/KDE/qca/archive/v{{ version }}.tar.gz
-  sha256: c67fc0fa8ae6cb3d0ba0fbd8fca8ee8e4c5061b99f1fd685fd7d9800cef17f6b
+  sha256: 81902861e02c5764025ea305673a48571773c5787141a8510d7ddb32e0f33c41
   patches:
     - enable_language.patch
 
 build:
-  number: 4
-  skip: True  # [win and vc<14]
+  number: 0
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
     - cmake
     - make  # [linux]
-    - pkg-config  # [unix]
+    - pkg-config
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://userbase.kde.org/QCA
-  license: LGPL-2.1L-only
+  license: LGPL-2.1-only
   license_file: COPYING
   summary: Qt Cryptographic Architecture (QCA) provides a straightforward and cross-platform crypto API, using Qt datatypes and conventions.
   description: |
