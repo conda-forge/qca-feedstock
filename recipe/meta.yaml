@@ -18,7 +18,7 @@ requirements:
   build:
     - cmake
     - make  # [linux]
-    - pkg-config  # [unix]
+    - pkg-config
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
