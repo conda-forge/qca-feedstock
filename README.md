@@ -3,7 +3,7 @@ About qca
 
 Home: https://userbase.kde.org/QCA
 
-Package license: LGPL-2.1L-only
+Package license: LGPL-2.1-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qca-feedstock/blob/main/LICENSE.txt)
 
