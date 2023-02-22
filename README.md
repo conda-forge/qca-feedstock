@@ -211,6 +211,8 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@SrNetoChan](https://github.com/SrNetoChan/)
 * [@ceholden](https://github.com/ceholden/)
+* [@gillins](https://github.com/gillins/)
 * [@izahn](https://github.com/izahn/)
 
