@@ -1,11 +1,11 @@
-About qca
-=========
+About qca-feedstock
+===================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qca-feedstock/blob/main/LICENSE.txt)
 
 Home: https://userbase.kde.org/QCA
 
 Package license: LGPL-2.1-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qca-feedstock/blob/main/LICENSE.txt)
 
 Summary: Qt Cryptographic Architecture (QCA) provides a straightforward and cross-platform crypto API, using Qt datatypes and conventions.
 
@@ -211,6 +211,8 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@SrNetoChan](https://github.com/SrNetoChan/)
 * [@ceholden](https://github.com/ceholden/)
+* [@gillins](https://github.com/gillins/)
 * [@izahn](https://github.com/izahn/)
 
