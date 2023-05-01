@@ -1,4 +1,4 @@
-{% set version = "2.3.5" %}
+{% set version = "2.3.6" %}
 
 package:
   name: qca
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/KDE/qca/archive/v{{ version }}.tar.gz
-  sha256: 326346893c5ad41c160b66ff10740ff4d8a1cbcd2fe545693f9791de1e01f00b
+  sha256: b64c4dbb80f26b62e871f9b8631652a4012aba486ab4973dd84da4ddab325985
   patches:
     - enable_language.patch
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
