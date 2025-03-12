@@ -17,7 +17,7 @@ build:
 requirements:
   build:
     - cmake
-    - make  # [linux]
+    - make  # [unix]
     - pkg-config
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
