@@ -9,7 +9,7 @@ source:
   sha256: c8af253cf515263246ea2be91a95978650a6c05d2698f2ba7286d297b352a0d4
 
 build:
-  number: 1
+  number: 2
   skip: true  # [(win and vc<14) or ppc64le]
 
 requirements:
@@ -21,12 +21,12 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - qt6-main    # [build_platform != target_platform]
+    - qt-main    # [build_platform != target_platform]
   host:
-    - qt6-main
+    - qt-main
     - openssl
   run:
-    - qt6-main
+    - qt-main
     - openssl
 
 # Pass to cmake via the recipe's build script or via extra cmake args:
@@ -35,11 +35,47 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libqca-qt6.so  # [linux]
-    - test -d ${PREFIX}/lib/qca-qt6.framework  # [osx]
-    - if not exist %LIBRARY_BIN%\\qca-qt6.dll exit 1  # [win]
-    - qcatool-qt6 --noprompt --newpass= key make rsa 2048 test.key  # [unix]
-    - qcatool-qt6.exe --noprompt --newpass= key make rsa 2048 test.key  # [win]
+    - test -f ${PREFIX}/lib/libqca-qt5.so  # [linux]
+    - test -d ${PREFIX}/lib/qca-qt5.framework  # [osx]
+    - if not exist %LIBRARY_BIN%\\qca-qt5.dll exit 1  # [win]
+    - qcatool-qt5 --noprompt --newpass= key make rsa 2048 test.key  # [unix]
+    - qcatool-qt5.exe  --noprompt --newpass= key make rsa 2048 test.key  # [win]
+
+outputs:
+  - name: qca
+  - name: qca-qt6
+    script: build_qt6.sh  # [unix]
+    script: bld_qt6.bat  # [win]
+    run_exports:
+      - {{ pin_subpackage('qca-qt6', max_pin='x.x') }}
+    requirements:
+      build:
+        - cmake
+        - make  # [unix]
+        - ninja
+        - pkg-config
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+        - {{ compiler('cxx') }}
+        - qt6-main    # [build_platform != target_platform]
+      host:
+        - qt6-main
+        - openssl
+      run:
+        - qt6-main
+        - openssl
+
+    # Pass to cmake via the recipe's build script or via extra cmake args:
+    # -DBUILD_WITH_QT6=ON
+    # -DQCA_SUFFIX=qt6
+
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/libqca-qt6.so  # [linux]
+        - test -d ${PREFIX}/lib/qca-qt6.framework  # [osx]
+        - if not exist %LIBRARY_BIN%\\qca-qt6.dll exit 1  # [win]
+        - qcatool-qt6 --noprompt --newpass= key make rsa 2048 test.key  # [unix]
+        - qcatool-qt6.exe --noprompt --newpass= key make rsa 2048 test.key  # [win]
 
 about:
   home: https://userbase.kde.org/QCA

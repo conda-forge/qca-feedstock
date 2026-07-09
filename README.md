@@ -82,6 +82,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-qca-green.svg)](https://anaconda.org/conda-forge/qca) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/qca.svg)](https://anaconda.org/conda-forge/qca) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/qca.svg)](https://anaconda.org/conda-forge/qca) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/qca.svg)](https://anaconda.org/conda-forge/qca) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-qca--qt6-green.svg)](https://anaconda.org/conda-forge/qca-qt6) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/qca-qt6.svg)](https://anaconda.org/conda-forge/qca-qt6) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/qca-qt6.svg)](https://anaconda.org/conda-forge/qca-qt6) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/qca-qt6.svg)](https://anaconda.org/conda-forge/qca-qt6) |
 
 Installing qca
 ==============
@@ -93,16 +94,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `qca` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `qca, qca-qt6` can be installed with `conda`:
 
 ```
-conda install qca
+conda install qca qca-qt6
 ```
 
 or with `mamba`:
 
 ```
-mamba install qca
+mamba install qca qca-qt6
 ```
 
 It is possible to list all of the versions of `qca` available on your platform with `conda`:
