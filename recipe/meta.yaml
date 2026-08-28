@@ -1,4 +1,4 @@
-{% set version = "2.3.10" %}
+{% set version = "2.3.12" %}
 
 package:
   name: qca
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/KDE/qca/archive/v{{ version }}.tar.gz
-  sha256: c8af253cf515263246ea2be91a95978650a6c05d2698f2ba7286d297b352a0d4
+  sha256: 66f91ec3fc26cdeb4acdb9d5a2175ff6cf003e60267edd58f7900c0e29712221
 
 build:
-  number: 2
+  number: 0
   skip: true  # [(win and vc<14) or ppc64le]
 
 requirements:
